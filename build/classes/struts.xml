@@ -9,7 +9,7 @@
 	<package name="exercise863" extends="struts-default">
 		<action name="loginPro" class="loginAction">
 			<result name="success">/WEB-INF/content/welcome.jsp</result>
-			<result name="error">/WEB-INF/comtent/error.jsp</result>
+			<result name="error">/WEB-INF/content/error.jsp</result>
 		</action>
 		<action name="*">
 			<result>/WEB-INF/content/{1}.jsp</result>
