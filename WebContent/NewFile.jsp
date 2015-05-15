@@ -13,5 +13,11 @@
 	<s:textfield  name="password" label="Password" value="123456"/>
 	<s:submit value="Go!"/>
 </s:form>
+<hr/>
+<s:form action="regAction">
+	<s:textfield name="person.name" label="Name"/>
+	<s:textfield name="person.age" label="Age"/>
+	<s:submit value="Register"/>
+</s:form>
 </body>
 </html>

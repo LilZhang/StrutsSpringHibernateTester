@@ -7,10 +7,16 @@
 	<constant name="struts.i18n.encoding" value="GBK"/>
 	<constant name="struts.devMode" value="true"/>
 	<package name="exercise863" extends="struts-default">
-		<action name="loginPro" class="loginAction">
+		<action name="loginPro" class="oops.exercise863.LoginAction">
 			<result name="success">/WEB-INF/content/welcome.jsp</result>
 			<result name="error">/WEB-INF/content/error.jsp</result>
 		</action>
+		
+		<action name="regAction" class="oops.exercise876.RegistAction">
+			<result name="success">/WEB-INF/content/re-welcome.jsp</result>
+			<result name="error">/WEB-INF/content/re-error.jsp</result>
+		</action>
+		
 		<action name="*">
 			<result>/WEB-INF/content/{1}.jsp</result>
 		</action>
