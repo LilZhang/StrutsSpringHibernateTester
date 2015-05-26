@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-26 10:28:06 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="oops.tester.domain.Test" table="TEST">
+    	<cache usage="read-write"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="testString" type="java.lang.String">
+            <column name="TESTSTRING" />
+        </property>
+        <property name="writeInTime" type="java.util.Date">
+            <column name="WRITEINTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

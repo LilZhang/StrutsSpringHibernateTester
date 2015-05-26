@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="GBK"?>
+<!-- 指定Struts2配置文件的DTD信息 -->
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
 	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
-	
+<!-- Struts2配置文件的根元素 -->
 <struts>
 	<constant name="struts.i18n.encoding" value="GBK"/>
 	<constant name="struts.devMode" value="true"/>
-	<package name="exercise863" extends="struts-default">
-		<action name="loginPro" class="oops.exercise863.LoginAction">
-			<result name="success">/WEB-INF/content/welcome.jsp</result>
-			<result name="error">/WEB-INF/content/error.jsp</result>
+	<package name="default" extends="struts-default" namespace="/">
+		<action name="processWriteAction" class="oops.tester.action.TestWriteAction">
+			<result>/result.jsp</result>
 		</action>
-		
-		<action name="regAction" class="oops.exercise876.RegistAction">
-			<result name="success">/WEB-INF/content/re-welcome.jsp</result>
-			<result name="error">/WEB-INF/content/re-error.jsp</result>
+		<action name="processSearchAction" class="oops.tester.action.TestSearchAction">
+			<result>/result.jsp</result>
 		</action>
-		
-		<action name="*">
-			<result>/WEB-INF/content/{1}.jsp</result>
+		<action name="back">
+			<result type="redirect">/index.jsp</result>
 		</action>
 	</package>
 </struts>
