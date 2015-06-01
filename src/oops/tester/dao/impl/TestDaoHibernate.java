@@ -39,7 +39,8 @@ public class TestDaoHibernate extends HibernateDaoSupport implements TestDao {
 
 	@Override
 	public List<Test> findByText(String text) {
-		return (List<Test>)getHibernateTemplate().find("from Test as t where t.testString = ?",text);
+		return (List<Test>)getHibernateTemplate().find("from Test as t where t.testString like ?","%"+text+"%");
+		//return (List<Test>)getHibernateTemplate().find("from Test as t where t.testString = ?",text);
 	}
 
 	@Override
